@@ -61,7 +61,7 @@
     width: calc(100% - 1em);
     bottom: -1px;
     transition: transform 0.4s, opacity 0.4s;
-    animation: widthUnderline 3s ease forwards;
+    animation: opacityShift 3s ease forwards;
   }
 
   a {
@@ -119,10 +119,12 @@
     margin: 0;
     padding: 0;
   }
-  @keyframes widthUnderline {
+  @keyframes opacityShift {
     0% {
       opacity: 0;
+      filter: contrast(0.5);
     }
+
     90% {
       opacity: 1;
     }
