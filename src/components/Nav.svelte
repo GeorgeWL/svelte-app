@@ -75,7 +75,7 @@
     margin-bottom: 2px;
   }
   @media (min-width: 768px) {
-    nav{
+    nav {
       min-width: 242px;
     }
   }
@@ -105,11 +105,8 @@
       flex: 1 1 auto;
       border-right: none;
     }
-    ul.social>li>a>span {
-      display: none;
-    }
   }
-   @media (max-width: 250px) {
+  @media (max-width: 250px) {
     nav {
       width: calc(100% - 2em);
     }
@@ -181,15 +178,18 @@
     </li>
     <li>
       <a
-        href="mailto:hello@georgewl.dev"
+        href="mailto:hello@georgewl.dev?subject=Get in touch"
         target="_blank"
         rel="nofollow noopener"
         style="text-transform:none"
-        class="link">
-      <span>
-        hello@georgewl.dev
-      </span> 
-        <img class="icon" src="email.svg" alt="e-mail" aria-hidden="true" />
+        class="link"
+        title="hello@georgewl.dev">
+        <img
+          class="icon"
+          src="email.svg"
+          alt="e-mail"
+          aria-hidden="true"
+          title="hello@georgewl.dev" />
       </a>
     </li>
   </ul>
