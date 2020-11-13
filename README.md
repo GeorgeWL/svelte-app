@@ -1,6 +1,8 @@
 # sapper-template
 
-The default [Sapper](https://github.com/sveltejs/sapper) template, available for Rollup and webpack.
+Experimenting with using [Svelte](//github.com/sveltejs/svelte) with the [static gen](https://jamstack.org/generators/) framework of Sapper, in order to create a new portfolio website.
+
+Using the default [Sapper](https://github.com/sveltejs/sapper) template, available for Rollup and webpack.
 
 
 ## Getting started
