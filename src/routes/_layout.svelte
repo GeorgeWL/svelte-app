@@ -10,7 +10,6 @@
     width: 100%;
 		position: relative;
 		max-width: 56em;
-		background-color: white;
 		padding: 2em;
 		box-sizing: border-box;
 	}
