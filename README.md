@@ -6,33 +6,13 @@ Using the default [Sapper](https://github.com/sveltejs/sapper) template, availab
 
 
 ## Getting started
-
-
-### Using `degit`
-
-[`degit`](https://github.com/Rich-Harris/degit) is a scaffolding tool that lets you create a directory from a branch in a repository. Use either the `rollup` or `webpack` branch in `sapper-template`:
-
-```bash
-# for Rollup
-npx degit "sveltejs/sapper-template#rollup" my-app
-# for webpack
-npx degit "sveltejs/sapper-template#webpack" my-app
-```
-
-
-### Using GitHub templates
-
-Alternatively, you can use GitHub's template feature with the [sapper-template-rollup](https://github.com/sveltejs/sapper-template-rollup) or [sapper-template-webpack](https://github.com/sveltejs/sapper-template-webpack) repositories.
-
-
 ### Running the project
 
-However you get the code, you can install dependencies and run the project in development mode with:
 
 ```bash
 cd my-app
 npm install # or yarn
-npm run dev
+npm run dev # or yarn
 ```
 
 Open up [localhost:3000](http://localhost:3000) and start clicking around.
@@ -90,7 +70,7 @@ To start a production version of your app, run `npm run build && npm start`. Thi
 You can deploy your application to any environment that supports Node 10 or above. As an example, to deploy to [Vercel Now](https://vercel.com) when using `sapper export`, run these commands:
 
 ```bash
-npm install -g vercel
+npm install -g vercel # or yarn
 vercel
 ```
 
