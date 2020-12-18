@@ -4,12 +4,12 @@
 
 <style>
   nav {
-    border-bottom: 1px solid rgba(255, 62, 0, 0.1);
     font-weight: 300;
-    padding: 0 1em;
     width: 12vw;
+    padding: 0 0;
     height: 100vh;
-    border-right: 1px solid rgba(255, 62, 0, 0.1);
+    border-bottom: 1px solid var(--primary-color);
+    border-right: 1px solid var(--primary-color);
     text-transform: capitalize;
     display: flex;
     flex-direction: column;
@@ -21,6 +21,7 @@
     padding: 0;
     display: flex;
     flex-direction: column;
+    padding: 0 1em;
   }
 
   /* clearfix */
@@ -32,7 +33,6 @@
 
   li {
     display: block;
-    float: left;
   }
 
   [aria-current]::after {
@@ -40,23 +40,24 @@
     content: "";
     width: calc(100% - 1em);
     height: 2px;
-    background-color: rgb(255, 62, 0);
+    background-color:var(--primary-color);
     display: block;
     bottom: -1px;
   }
-  .link {
+  .nav-link {
     position: relative;
     display: inline-block;
     width: fit-content;
     flex: 0 0 auto;
+    border-bottom: none;
   }
 
-  .link:hover::after,
-  .link:focus::after {
+  .nav-link:hover::after,
+  .nav-link:focus::after {
     position: absolute;
     content: "";
     height: 2px;
-    background-color: rgb(255, 62, 0);
+    background-color: var(--primary-color);
     display: block;
     width: calc(100% - 1em);
     bottom: -1px;
@@ -73,10 +74,12 @@
   ul.social {
     flex-direction: row;
     margin-bottom: 2px;
+    background: var(--primary-color);
   }
   @media (min-width: 768px) {
     nav {
       min-width: 242px;
+      border-bottom: none;
     }
   }
   @media (max-width: 768px) {
@@ -119,6 +122,7 @@
     margin: 0;
     padding: 0;
   }
+ 
   @keyframes opacityShift {
     0% {
       opacity: 0;
@@ -136,24 +140,32 @@
     <li>
       <a
         aria-current={segment === undefined ? 'page' : undefined}
-        class="link"
+        class="nav-link"
         href=".">home</a>
     </li>
     <li>
       <a
         aria-current={segment === 'about' ? 'page' : undefined}
-        class="link"
+        class="nav-link"
         href="about">about</a>
     </li>
 
     <!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->
-    <li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog"        class="link"
->blog</a></li>
+    <li>
+      <a 
+      rel=prefetch
+       aria-current="{segment === 'blog' ? 'page' : undefined}"
+        href="blog"
+         class="nav-link"
+>
+blog
+</a>
+</li>
     <li>
       <a
         aria-current={segment === 'contact' ? 'page' : undefined}
-        class="link"
+        class="nav-link"
         href="contact">contact</a>
     </li>
   </ul>
@@ -164,7 +176,7 @@
         target="_blank"
         rel="nofollow noopener"
         title="GitHub"
-        class="link">
+       >
         <img src="github.png" alt="GitHub" title="GitHub" class="icon" />
       </a>
     </li>
@@ -174,7 +186,7 @@
         target="_blank"
         rel="nofollow noopener"
         title="LinkedIn"
-        class="link">
+        >
         <img src="linkedin.png" alt="LinkedIn" title="LinkedIn" class="icon" />
       </a>
     </li>
@@ -184,7 +196,6 @@
         target="_blank"
         rel="nofollow noopener"
         style="text-transform:none"
-        class="link"
         title="hello@georgewl.dev">
         <img
           class="icon"
